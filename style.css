@@ -1,0 +1,149 @@
+/* GLOBAL SETTINGS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --header-gradient: linear-gradient(to right, #574AE8, #3EA1DB);
+    --bg-body: #F9F9F9;
+    --bg-input: #ffffff33;
+    --title-base: #1A202C;
+    --text-base: #717171;
+
+    --primary-font: 'Lexend Deca', sans-serif;
+    --second-font: 'Inter', sans-serif;
+
+    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--primary-font);
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-body);
+}
+
+body > header, main{
+    min-width: 31.5rem;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: min(94rem, 100%);
+    margin-inline: auto;
+}
+
+/* HEADER */
+.main-header{
+    height: 20rem;
+    padding-bottom: 4.8rem;
+    background-image: var(--header-gradient);
+}
+
+.main-header .wrapper{
+    gap: 4.1rem;
+    padding: 4.8rem 2rem;
+}
+
+.main-header .top-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header .top-box a{
+    text-decoration: none;
+}
+
+.main-header .top-box h1, h3{
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+}
+
+.main-header img{
+    position: absolute;
+    top: 12.4rem;
+    left: 3.2rem;
+    width: 1.5rem;
+}
+
+.main-header input{
+    color: #fff;
+    font-family: var(--second-font);
+    padding: 1.2rem 3.8rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--bg-input);
+}
+
+.main-header input:focus{
+    outline: .1rem solid #fff;
+}
+
+.main-header input::placeholder{
+    color: #fff;
+    opacity: 50%;
+}
+
+/* modify chrome default setting */
+.main-header input::-webkit-search-cancel-button{
+    display: none;
+}
+
+/* MAIN */
+.main-content .wrapper{
+    gap: 2.5rem;
+    padding: 5rem 2rem;
+}
+
+.main-content .wrapper article{
+    width: 100%;
+    padding: 1.6rem;
+    border-radius: .5rem;
+    box-shadow: .1rem .1rem .1rem rgba(19, 19, 31, 0.041);
+    background-color: #fff;
+}
+
+.main-content .wrapper article header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content .wrapper article header time{
+    color: var(--text-base);
+    font-size: 1.4rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+}
+
+.main-content .wrapper article header button{
+    display: flex;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.main-content .wrapper article header img{
+    width: 1.9rem;
+}
+
+.main-content .wrapper article section h2{
+    color: var(--title-base);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    margin-block: 2.7rem .9rem;
+}
+
+.main-content .wrapper article section p{
+    color: var(--text-base);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+}
